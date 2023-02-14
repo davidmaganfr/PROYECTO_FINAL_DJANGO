@@ -1,6 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Contact
 
-def contactos(request):
-    return render(request, 'general.html', {})
+def index(request):
+    contacts= Contact.objects.filter(name__contains=request.GET.get('search', ''))
+    context= {'contacts': contacts}
+
+    return render(request, 'agenda/index.html', context)
 

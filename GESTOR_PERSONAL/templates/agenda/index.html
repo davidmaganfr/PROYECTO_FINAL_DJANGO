@@ -1,0 +1,22 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %}Contactos{% endblock %}
+
+{% block 'content' %}
+<form class='search' action='{% url 'agenda' %}' method='GET'>
+    <input type='text' name='seach' class='search-bar' placeholder='Buscar contacto...'>
+    <input type='submit' value='Buscar' class= 'btn btn-search'>
+</form>
+<ul class='list'>
+    {% for contact in contacts%}
+    <li> {{ contact }} 
+        <span>
+            <a href='#' class='btn btn-detail'>Ver</a>
+            <a href='#' class='btn btn-edit'>Editar</a>
+            <a href='#' class='btn btn-delete'>Borrar</a>
+        </span>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
