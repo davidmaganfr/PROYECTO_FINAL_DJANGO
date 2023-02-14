@@ -151,3 +151,17 @@ main {
     background-color: whitesmoke;
     color: var(--color-primary);
 }
+
+.aux-btn {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.aux-btn a {
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+/*End Layout settings */
