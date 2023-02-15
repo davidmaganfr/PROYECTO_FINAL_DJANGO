@@ -1,7 +1,7 @@
-{#Esta es dentro de la pestaña de contactos, la opcion AÑADIR CONTACTO dentro del servidor#}
+{#Esta es dentro de la pestaña de contactos, la opcion EDITAR dentro del servidor#}
 {% extends 'layout/base.html' %}
 
-{% block 'title' %}Añadir contacto{% endblock %}
+{% block 'title' %}Editar contacto{% endblock %}
 
 {% block 'styles' %}
     {% load static %}
@@ -18,7 +18,7 @@
     {% endif %}
 
     <span class='aux-btn-form'><a href='{% url 'agenda' %}'>Volver atras</a></span>
-    <form action= '{% url 'contact_create' %}' method='POST'>
+    <form action= '{% url 'contact_edit' id=id %}' method='POST'>
         {% csrf_token %}
         <table>
             {{ form.as_table}}

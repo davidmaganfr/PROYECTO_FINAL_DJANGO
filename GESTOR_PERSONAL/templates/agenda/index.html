@@ -12,7 +12,7 @@
     <input type='text' name='search' class='search-bar' placeholder='Buscar contacto...'>
     <input type='submit' value='Buscar' class= 'btn btn-search'>
 </form>
-<span class='aux-btn'><a href='{% url 'agenda' %}'>Ver todos</a> <a href='#'>Añadir</a></span>
+<span class='aux-btn'><a href='{% url 'agenda' %}'>Ver todos</a> <a href='{% url 'contact_create' %}'>Añadir</a></span>
 <ul class='list'>
     {% for contact in contacts%}
     <li> {{ contact }} 
