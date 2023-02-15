@@ -1,6 +1,11 @@
+{#Esta es la pestaña de Contactos dentro del servidor#}
 {% extends 'layout/base.html' %}
 
 {% block 'title' %}Contactos{% endblock %}
+
+{% block 'styles' %}
+
+{% endblock %}
 
 {% block 'content' %}
 <form class='search' action='{% url 'agenda' %}' method='GET'>
@@ -12,8 +17,8 @@
     {% for contact in contacts%}
     <li> {{ contact }} 
         <span>
-            <a href='#' class='btn btn-detail'>Ver</a>
-            <a href='#' class='btn btn-edit'>Editar</a>
+            <a href='{% url 'contact_view' id=contact.id %}' class='btn btn-detail'>Ver</a>
+            <a href='{% url 'contact_edit' id=contact.id %}' class='btn btn-edit'>Editar</a>
             <a href='#' class='btn btn-delete'>Borrar</a>
         </span>
     </li>

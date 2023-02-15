@@ -2,6 +2,7 @@ from django.db import models
 from datetime import date
 
 class Contact(models.Model):
+    number_dni= models.CharField(max_length=10, blank=True, null=True)
     name= models.CharField(max_length=50, blank=False, null=False)
     last_name= models.CharField(max_length=50, blank=True, null=True)
     phone= models.CharField(max_length=12, blank=True, null=True)

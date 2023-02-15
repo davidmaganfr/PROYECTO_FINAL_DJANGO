@@ -1,0 +1,19 @@
+{#Esta es dentro de la pestaña de contactos, la opcion VER dentro del servidor#}
+{% extends 'layout/base.html' %}
+
+{% block 'title' %}Contacto {{contact.name}}{% endblock %}
+
+{% block 'content' %}
+<span class='aux-btn'><a href='{% url 'agenda' %}'>Volver atras</a> <a href='#'>Añadir</a></span>
+<ul class='list'>
+    <li><b>Nombre:</b> {{ contact.name }} </li>
+    <li><b>Apellido:</b> {{ contact.last_name }} </li>
+    <li><b>DNI:</b> {{ contact.number_dni }} </li>
+    <li><b>Telefono:</b> {{ contact.phone }} </li>
+    <li><b>Telefono movil:</b> {{ contact.mobile }} </li>
+    <li><b>Email:</b> {{ contact.email }} </li>
+    <li><b>Empresa:</b> {{ contact.company }} </li>
+    <li><b>Fecha de ingreso:</b> {{ contact.date }} </li>
+    <li><b>Notas:</b> {{ contact.notes }} </li>
+</ul>
+{% endblock %}
