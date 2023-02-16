@@ -50,4 +50,9 @@ def create(request):
         messages.success(request, 'Contacto creado correctamente.')
         return render(request, 'agenda/create.html', context)
         
-
+def delete(request, id):
+    contact= Contact.objects.get(id=id)
+    contact.delete()
+    
+    messages.success(request, 'Contacto borrado correctamente.')
+    return redirect('agenda')

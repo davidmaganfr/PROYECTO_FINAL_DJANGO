@@ -1,1 +1,26 @@
 {#Esta es la pestaña de TAREAS dentro del servidor#}
+{% extends 'layout/base.html' %}
+
+{% block 'title' %}Tareas{% endblock %}
+
+{% block 'styles' %}{% endblock %}
+
+{% block 'content' %}
+    <form class='search' action='{% url 'todo' %}' method='GET'>
+        <input type='text' name='search' class='search-bar' placeholder='Buscar tarea...'>
+        <input type='submit' value='Buscar' class= 'btn btn-search'>
+    </form>
+    <span class='aux-btn'><a href='{% url 'todo' %}'>Ver todas</a> <a href='{% url 'todo_create' %}'>Añadir tarea</a></span>
+        <ul class='list'>
+            {% for tarea in tareas%}
+                <li> {{ tarea }} 
+                    <span>
+                        <a href='{% url 'todo_view' id=tarea.id %}' class='btn btn-detail'>Ver</a>
+                        <a href='{% url 'todo_edit' id=tarea.id %}' class='btn btn-edit'>Editar</a>
+                        <a href='{% url 'todo_delete' id=tarea.id %}' class='btn btn-delete'>Borrar</a>
+                    </span>
+                </li>
+            {% endfor %}
+        </ul>
+{% endblock %}
+

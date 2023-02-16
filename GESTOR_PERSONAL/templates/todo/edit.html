@@ -1,7 +1,7 @@
-{#Esta es dentro de la pestaña de contactos, la opcion AÑADIR CONTACTO dentro del servidor#}
+{#Esta es dentro de la pestaña de tareas, la opcion EDITAR dentro del servidor#}
 {% extends 'layout/base.html' %}
 
-{% block 'title' %}Añadir tarea{% endblock %}
+{% block 'title' %}Editar tarea{% endblock %}
 
 {% block 'styles' %}
     {% load static %}
@@ -18,7 +18,7 @@
     {% endif %}
 
     <span class='aux-btn-form'><a href='{% url 'todo' %}'>Volver atras</a></span>
-    <form action= '{% url 'todo_create' %}' method='POST'>
+    <form action= '{% url 'todo_edit' id=id %}' method='POST'>
         {% csrf_token %}
         <table>
             {{ form.as_table}}
