@@ -6,10 +6,8 @@
 {% block 'styles' %}{% endblock %}
 
 {% block 'content' %}
-    <form class='search' action='{% url 'todo' %}' method='GET'>
-        <input type='text' name='search' class='search-bar' placeholder='Buscar tarea...'>
-        <input type='submit' value='Buscar' class= 'btn btn-search'>
-    </form>
+    <h1>Tareas pendientes</h1>
+    {% include 'todo/partials/form_search.html' %}
     <span class='aux-btn'><a href='{% url 'todo' %}'>Ver todas</a> <a href='{% url 'todo_create' %}'>Añadir tarea</a></span>
         <ul class='list'>
             {% for tarea in tareas%}

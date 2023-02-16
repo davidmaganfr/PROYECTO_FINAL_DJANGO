@@ -1,8 +1,11 @@
 {#Este es el menu de navegacion principal#}
+{% load static %}
 <nav>
+    <img src="{% static 'css/img/QRS.png' %}" width="80"/>
     <ul>
         <li><a href= {% url 'index' %}>Inicio</a></li>
         <li><a href= {% url 'agenda' %}>Contactos</a></li>
         <li><a href= {% url 'todo' %}>Tareas</a></li>
     </ul>
+    <img src="{% static 'css/img/QRS.png' %}" width="80"/>
 </nav>

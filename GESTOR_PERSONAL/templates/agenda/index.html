@@ -6,17 +6,10 @@
 {% block 'styles' %}{% endblock %}
 
 {% block 'content' %}
-    {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <li{% if message.tags %} class="alert-success"{% endif %}>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-    <form class='search' action='{% url 'agenda' %}' method='GET'>
-        <input type='text' name='search' class='search-bar' placeholder='Buscar contacto...'>
-        <input type='submit' value='Buscar' class= 'btn btn-search'>
-    </form>
+<h1>Contactos</h1>
+   
+    {% include 'agenda/partials/form_search.html' %}
+
     <span class='aux-btn'><a href='{% url 'agenda' %}'>Ver todos</a> <a href='{% url 'contact_create' %}'>Añadir</a></span>
         <ul class='list'>
             {% for contact in contacts%}
