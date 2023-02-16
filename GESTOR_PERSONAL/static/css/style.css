@@ -1,10 +1,14 @@
 :root {
-    --color-primary: #2ea3f2;
-    --color-text: #666;
+    --color-primary: whitesmoke;
+    --color-text: black;
     --font-main: Salinas;
     --font-text: Salinas;
 }
 
+
+body {
+    background-image: url('img/img1.jpg');
+}
 /* Main settings */
 
 * {
@@ -32,7 +36,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 110vw;
     height: 80px;
     background-color: var(--color-primary);
 }
@@ -48,10 +52,11 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
     text-transform: uppercase;
     font-family: var(--font-main);
-    padding: 10px;
+    padding: 60px;
+    font-size: 25px;
 }
 
 nav ul li a:hover {
@@ -84,10 +89,13 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: whitesmoke;
+    color: black;
 }
 
 .list li b {
     font-size: 15px;
+    color: black;
 }
 
 .btn {
@@ -99,12 +107,12 @@ main {
 }
 
 .btn-detail {
-    background-color: var(--color-primary);
-    color: white;
+    background-color: rgb(64, 209, 242);
+    color: black;
 }
 
 .btn-detail:hover{
-    background-color: white;
+    background-color: rgb(105, 219, 232);
     color: var(--color-primary)
 }
 

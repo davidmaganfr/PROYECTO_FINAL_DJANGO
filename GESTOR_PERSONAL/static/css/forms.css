@@ -7,9 +7,9 @@ input {
 }
 
 .btn-send {
-    width: 81%;
-    background-color: var(--color-primary);
-    color: white;
+    width: 80%;
+    background-color: rgb(224, 162, 162);
+    color: black;
     border: 0px;
     padding: 5px;
     text-transform: uppercase;
@@ -20,6 +20,8 @@ input {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    color: black;
+    background-color: antiquewhite;
 }
 
 .aux-btn-form {
@@ -27,9 +29,12 @@ input {
     display: flex;
     justify-content: right;
     margin: 10px;
+    color: black;
 }
 
 .aux-btn-form a {
     padding-right: 10px;
     text-decoration: none;
+    color: black;
 }
+

@@ -4,7 +4,7 @@
 {% block 'title' %} Tarea {{tarea.title}} {% endblock %}
 
 {% block 'content' %}
-    <span class='aux-btn'><a href='{% url 'todo' %}'>Volver atras</a> <a href='todo_create'>Añadir</a></span>
+    <span class='aux-btn'><a href='{% url 'todo' %}'>Volver</a></span>
     <ul class='list'>
         <li><b>Titulo:</b> {{ tarea.title }} </li>
         <li><b>Descripción:</b> {{ tarea.description }} </li>
